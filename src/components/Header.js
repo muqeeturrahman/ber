@@ -19,9 +19,9 @@ const navigation = [
       { name: 'Temporary Staffing', href: '/services#temporary-staffing' }
     ]
   },
-  { name: 'Employers', href: '/employers' },
-  { name: 'Job Seekers', href: '/job-seekers' },
-  { name: 'Jobs', href: '/jobs' },
+  // { name: 'Employers', href: '/employers' },
+  // { name: 'Job Seekers', href: '/job-seekers' },
+  // { name: 'Jobs', href: '/jobs' },
   { name: 'Contact', href: '/contact' }
 ]
 
