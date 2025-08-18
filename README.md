@@ -1,4 +1,4 @@
-# TalentBridge HR Agency Website
+# Beecruit HR Agency Website
 
 A modern, responsive HR agency website built with Next.js, featuring a clean design, comprehensive functionality, and professional user experience.
 

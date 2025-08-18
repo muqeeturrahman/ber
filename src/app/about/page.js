@@ -64,7 +64,7 @@ export default function AboutPage() {
             className="text-center"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              About <span className="text-gradient">TalentBridge</span>
+              About <span className="text-gradient">Beecruit</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We're more than just an HR agency. We're your strategic partner in building 
@@ -88,7 +88,7 @@ export default function AboutPage() {
                 Our Mission
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                At TalentBridge, we believe that the right people in the right roles can 
+                At Beecruit, we believe that the right people in the right roles can 
                 transform organizations and create extraordinary outcomes. Our mission is to 
                 bridge the gap between exceptional talent and ambitious employers, creating 
                 partnerships that drive success for both parties.

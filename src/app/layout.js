@@ -16,34 +16,34 @@ const poppins = Poppins({
 
 export const metadata = {
   title: {
-    default: 'TalentBridge HR Agency - Empowering Companies. Elevating Careers.',
-    template: '%s | TalentBridge HR Agency'
+    default: 'Beecruit HR Agency - Empowering Companies. Elevating Careers.',
+    template: '%s | Beecruit HR Agency'
   },
   description: 'We bridge the gap between top talent and ambitious employers, providing comprehensive HR solutions for modern businesses.',
   keywords: ['HR agency', 'recruitment', 'talent acquisition', 'executive search', 'HR consulting', 'staffing'],
-  authors: [{ name: 'TalentBridge HR Agency' }],
-  creator: 'TalentBridge HR Agency',
-  publisher: 'TalentBridge HR Agency',
+  authors: [{ name: 'Beecruit HR Agency' }],
+  creator: 'Beecruit HR Agency',
+  publisher: 'Beecruit HR Agency',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://talentbridge.com'),
+  metadataBase: new URL('https://Beecruit.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'TalentBridge HR Agency - Empowering Companies. Elevating Careers.',
+    title: 'Beecruit HR Agency - Empowering Companies. Elevating Careers.',
     description: 'We bridge the gap between top talent and ambitious employers, providing comprehensive HR solutions for modern businesses.',
-    url: 'https://talentbridge.com',
-    siteName: 'TalentBridge HR Agency',
+    url: 'https://Beecruit.com',
+    siteName: 'Beecruit HR Agency',
     images: [
       {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'TalentBridge HR Agency',
+        alt: 'Beecruit HR Agency',
       },
     ],
     locale: 'en_US',
@@ -51,7 +51,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'TalentBridge HR Agency - Empowering Companies. Elevating Careers.',
+    title: 'Beecruit HR Agency - Empowering Companies. Elevating Careers.',
     description: 'We bridge the gap between top talent and ambitious employers, providing comprehensive HR solutions for modern businesses.',
     images: ['/images/og-image.jpg'],
   },

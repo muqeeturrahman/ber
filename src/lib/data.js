@@ -223,17 +223,17 @@ export const blogPosts = [
 
 // Company information
 export const companyInfo = {
-  name: 'TalentBridge HR Agency',
+  name: 'Beecruit HR Agency',
   tagline: 'Empowering Companies. Elevating Careers.',
   description: 'We bridge the gap between top talent and ambitious employers, providing comprehensive HR solutions for modern businesses.',
   contact: {
-    email: 'hello@talentbridge.com',
+    email: 'hello@Beecruit.com',
     phone: '+1 (555) 123-4567',
     address: '123 Business Ave, Suite 100, San Francisco, CA 94105'
   },
   social: {
-    linkedin: 'https://linkedin.com/company/talentbridge',
-    twitter: 'https://twitter.com/talentbridge',
-    facebook: 'https://facebook.com/talentbridge'
+    linkedin: 'https://linkedin.com/company/Beecruit',
+    twitter: 'https://twitter.com/Beecruit',
+    facebook: 'https://facebook.com/Beecruit'
   }
 } 

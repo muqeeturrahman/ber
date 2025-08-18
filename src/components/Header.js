@@ -57,13 +57,30 @@ export default function Header() {
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 lg:w-10 lg:h-10 bg-primary-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg lg:text-xl">TB</span>
+          <Link href="/" className="flex items-center space-x-3 group">
+            {/* Bee Icon */}
+            <div className="relative w-10 h-10 lg:w-12 lg:h-12">
+              <div className="w-full h-full bg-gradient-to-br from-yellow-400 to-amber-500 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:scale-105">
+                {/* Bee SVG Icon */}
+                <svg 
+                  viewBox="0 0 24 24" 
+                  className="w-6 h-6 lg:w-7 lg:h-7 text-gray-800"
+                  fill="currentColor"
+                >
+                  <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 9L13.5 7.5C13.1 7.1 12.6 6.9 12 6.9S10.9 7.1 10.5 7.5L9 9L3 7V9L9 11L10.5 9.5C10.9 9.1 11.4 8.9 12 8.9S13.1 9.1 13.5 9.5L15 11L21 9ZM12 10C10.9 10 10 10.9 10 12S10.9 14 12 14 14 13.1 14 12 13.1 10 12 10ZM4 16C4 18.2 5.8 20 8 20S12 18.2 12 16C12 15.2 11.8 14.5 11.4 13.9L10 15.3L8.6 13.9C8.2 14.5 8 15.2 8 16H4ZM16 20C18.2 20 20 18.2 20 16H16C16 15.2 15.8 14.5 15.4 13.9L14 15.3L12.6 13.9C12.2 14.5 12 15.2 12 16C12 18.2 13.8 20 16 20Z"/>
+                </svg>
+              </div>
             </div>
-            <span className="text-xl lg:text-2xl font-bold text-gray-900">
-              TalentBridge
-            </span>
+            
+            {/* Brand Text */}
+            <div className="flex flex-col">
+              <span className="text-2xl lg:text-3xl font-bold text-gray-900 leading-none">
+                Beecruit
+              </span>
+              <span className="text-xs lg:text-sm text-gray-600 font-medium leading-none">
+                HR Solutions That Speak Volumes
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -76,10 +93,10 @@ export default function Header() {
                     onMouseEnter={() => setActiveDropdown(item.name)}
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
-                    <span className="text-gray-700 hover:text-primary-600 transition-colors duration-200">
+                    <span className="text-gray-700 hover:text-primary-600 transition-colors duration-200 font-medium">
                       {item.name}
                     </span>
-                    <ChevronDown className="w-4 h-4 text-gray-500 group-hover:text-primary-600 transition-colors duration-200" />
+                    <ChevronDown className="w-4 h-4 text-gray-500 group-hover:text-primary-600 transition-all duration-200 group-hover:rotate-180" />
                     
                     {/* Dropdown Menu */}
                     <AnimatePresence>
@@ -88,13 +105,13 @@ export default function Header() {
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 10 }}
-                          className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2"
+                          className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-100 py-2 overflow-hidden"
                         >
                           {item.dropdown.map((dropdownItem) => (
                             <Link
                               key={dropdownItem.name}
                               href={dropdownItem.href}
-                              className="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors duration-200"
+                              className="block px-4 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-yellow-50 hover:to-amber-50 hover:text-gray-900 transition-all duration-200 font-medium"
                             >
                               {dropdownItem.name}
                             </Link>
@@ -106,7 +123,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="text-gray-700 hover:text-primary-600 transition-colors duration-200"
+                    className="text-gray-700 hover:text-primary-600 transition-colors duration-200 font-medium"
                   >
                     {item.name}
                   </Link>
@@ -117,10 +134,16 @@ export default function Header() {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Link href="/jobs" className="btn-outline">
+            <Link 
+              href="/jobs" 
+              className="btn-outline hover:border-yellow-400 hover:text-yellow-600 transition-all duration-300"
+            >
               View Jobs
             </Link>
-            <Link href="/contact" className="btn-primary">
+            <Link 
+              href="/contact" 
+              className="btn-primary bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 border-0 shadow-md hover:shadow-lg transition-all duration-300"
+            >
               Hire Talent
             </Link>
           </div>
@@ -157,7 +180,7 @@ export default function Header() {
                       <div>
                         <button
                           onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
-                          className="flex items-center justify-between w-full px-4 py-2 text-left text-gray-700 hover:bg-gray-50 rounded-lg"
+                          className="flex items-center justify-between w-full px-4 py-3 text-left text-gray-700 hover:bg-gradient-to-r hover:from-yellow-50 hover:to-amber-50 rounded-lg font-medium"
                         >
                           <span>{item.name}</span>
                           <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
@@ -177,7 +200,7 @@ export default function Header() {
                                   key={dropdownItem.name}
                                   href={dropdownItem.href}
                                   onClick={closeMenu}
-                                  className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-lg"
+                                  className="block px-4 py-2 text-gray-600 hover:bg-gradient-to-r hover:from-yellow-50 hover:to-amber-50 hover:text-gray-800 rounded-lg transition-all duration-200"
                                 >
                                   {dropdownItem.name}
                                 </Link>
@@ -190,7 +213,7 @@ export default function Header() {
                       <Link
                         href={item.href}
                         onClick={closeMenu}
-                        className="block px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg"
+                        className="block px-4 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-yellow-50 hover:to-amber-50 rounded-lg font-medium"
                       >
                         {item.name}
                       </Link>
@@ -204,14 +227,14 @@ export default function Header() {
                 <Link
                   href="/jobs"
                   onClick={closeMenu}
-                  className="block w-full text-center btn-outline"
+                  className="block w-full text-center btn-outline hover:border-yellow-400 hover:text-yellow-600"
                 >
                   View Jobs
                 </Link>
                 <Link
                   href="/contact"
                   onClick={closeMenu}
-                  className="block w-full text-center btn-primary"
+                  className="block w-full text-center btn-primary bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 border-0"
                 >
                   Hire Talent
                 </Link>
@@ -222,4 +245,4 @@ export default function Header() {
       </AnimatePresence>
     </header>
   )
-} 
+}
