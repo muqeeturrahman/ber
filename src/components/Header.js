@@ -48,38 +48,31 @@ export default function Header() {
     setActiveDropdown(null)
   }
 
-  return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-white/95 backdrop-blur-md shadow-lg' 
-        : 'bg-white'
-    }`}>
+  // return (
+//  <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+//   isScrolled 
+//     ? 'bg-yellow-400 shadow-lg' 
+//     : 'bg-yellow-400'
+// }`}>
+return (
+  <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    isScrolled 
+      ? 'bg-white/95 backdrop-blur-md shadow-lg' 
+      : 'bg-white'
+  }`}>
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 group">
-            {/* Bee Icon */}
-            <div className="relative w-10 h-10 lg:w-12 lg:h-12">
-              <div className="w-full h-full bg-gradient-to-br from-yellow-400 to-amber-500 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:scale-105">
-                {/* Bee SVG Icon */}
-                <svg 
-                  viewBox="0 0 24 24" 
-                  className="w-6 h-6 lg:w-7 lg:h-7 text-gray-800"
-                  fill="currentColor"
-                >
-                  <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 9L13.5 7.5C13.1 7.1 12.6 6.9 12 6.9S10.9 7.1 10.5 7.5L9 9L3 7V9L9 11L10.5 9.5C10.9 9.1 11.4 8.9 12 8.9S13.1 9.1 13.5 9.5L15 11L21 9ZM12 10C10.9 10 10 10.9 10 12S10.9 14 12 14 14 13.1 14 12 13.1 10 12 10ZM4 16C4 18.2 5.8 20 8 20S12 18.2 12 16C12 15.2 11.8 14.5 11.4 13.9L10 15.3L8.6 13.9C8.2 14.5 8 15.2 8 16H4ZM16 20C18.2 20 20 18.2 20 16H16C16 15.2 15.8 14.5 15.4 13.9L14 15.3L12.6 13.9C12.2 14.5 12 15.2 12 16C12 18.2 13.8 20 16 20Z"/>
-                </svg>
-              </div>
-            </div>
-            
-            {/* Brand Text */}
-            <div className="flex flex-col">
-              <span className="text-2xl lg:text-3xl font-bold text-gray-900 leading-none">
-                Beecruit
-              </span>
-              <span className="text-xs lg:text-sm text-gray-600 font-medium leading-none">
-                HR Solutions That Speak Volumes
-              </span>
+          <Link href="/" className="flex items-center group">
+            <div className="relative h-12 lg:h-16 w-auto">
+              <Image
+                src="/logo-removebg-preview.png"
+                alt="Beecruit - HR Solutions That Speak Volumes"
+                width={200}
+                height={64}
+                className="h-full w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                priority
+              />
             </div>
           </Link>
 
