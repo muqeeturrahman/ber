@@ -16,11 +16,24 @@ const poppins = Poppins({
 
 export const metadata = {
   title: {
-    default: 'Beecruit HR Agency - Empowering Companies. Elevating Careers.',
+    default: 'Beecruit — HR Agency Pakistan & UAE | Outsourced HR',
     template: '%s | Beecruit HR Agency'
   },
-  description: 'We bridge the gap between top talent and ambitious employers, providing comprehensive HR solutions for modern businesses.',
-  keywords: ['HR agency', 'recruitment', 'talent acquisition', 'executive search', 'HR consulting', 'staffing'],
+  description: 'End-to-end HR outsourcing, recruitment, payroll & compliance for SMEs and enterprises in Pakistan & UAE. Smart, scalable, human-centered HR.',
+  keywords: [
+    'HR agency Pakistan',
+    'HR agency UAE',
+    'HR consultancy services',
+    'outsourced HR',
+    'end-to-end HR services',
+    'custom HR solutions',
+    'recruitment solutions Dubai',
+    'executive hiring Pakistan UAE',
+    'bulk hiring services',
+    'payroll outsourcing UAE',
+    'HR outsourcing Pakistan',
+    'performance management system'
+  ],
   authors: [{ name: 'Beecruit HR Agency' }],
   creator: 'Beecruit HR Agency',
   publisher: 'Beecruit HR Agency',
@@ -34,8 +47,8 @@ export const metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Beecruit HR Agency - Empowering Companies. Elevating Careers.',
-    description: 'We bridge the gap between top talent and ambitious employers, providing comprehensive HR solutions for modern businesses.',
+    title: 'Beecruit — HR Agency Pakistan & UAE | Outsourced HR',
+    description: 'End-to-end HR outsourcing, recruitment, payroll & compliance for SMEs and enterprises in Pakistan & UAE. Smart, scalable, human-centered HR.',
     url: 'https://Beecruit.com',
     siteName: 'Beecruit HR Agency',
     images: [
@@ -51,8 +64,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Beecruit HR Agency - Empowering Companies. Elevating Careers.',
-    description: 'We bridge the gap between top talent and ambitious employers, providing comprehensive HR solutions for modern businesses.',
+    title: 'Beecruit — HR Agency Pakistan & UAE | Outsourced HR',
+    description: 'End-to-end HR outsourcing, recruitment, payroll & compliance for SMEs and enterprises in Pakistan & UAE. Smart, scalable, human-centered HR.',
     images: ['/images/og-image.jpg'],
   },
   robots: {

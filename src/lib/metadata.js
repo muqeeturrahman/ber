@@ -1,19 +1,19 @@
 // Metadata configurations for client components
 export const pageMetadata = {
   home: {
-    title: 'Beecruit HR Agency - Empowering Companies. Elevating Careers.',
-    description: 'We bridge the gap between top talent and ambitious employers, providing comprehensive HR solutions for modern businesses.',
-    keywords: ['HR agency', 'recruitment', 'talent acquisition', 'executive search', 'HR consulting', 'staffing'],
+    title: 'Beecruit — HR Agency Pakistan & UAE | Outsourced HR',
+    description: 'End-to-end HR outsourcing, recruitment, payroll & compliance for SMEs and enterprises in Pakistan & UAE. Smart, scalable, human-centered HR.',
+    keywords: ['HR agency Pakistan', 'HR agency UAE', 'outsourced HR', 'payroll outsourcing UAE', 'executive hiring Pakistan UAE'],
   },
   about: {
-    title: 'About Us - Beecruit HR Agency',
-    description: 'Learn about Beecruit HR Agency, our mission, values, and the team behind our success in connecting top talent with ambitious employers.',
-    keywords: ['about us', 'HR agency about', 'company values', 'team', 'mission'],
+    title: 'About Beecruit | Trusted HR Partner',
+    description: '9+ years delivering HR consultancy services, recruitment, payroll outsourcing, and people operations with integrity and results.',
+    keywords: ['HR consultancy services', 'trusted HR partner', 'people-first HR'],
   },
   services: {
-    title: 'Our Services - Beecruit HR Agency',
-    description: 'Comprehensive HR services including executive search, technical recruitment, HR consulting, and temporary staffing. Find the perfect solution for your hiring needs.',
-    keywords: ['HR services', 'executive search', 'technical recruitment', 'HR consulting', 'staffing services'],
+    title: 'HR Services — Recruitment, Payroll, Outsourced HR | Beecruit',
+    description: 'Executive hiring, bulk recruitment, HR operations & advisory, payroll outsourcing UAE & Pakistan, L&D, compensation & benefits.',
+    keywords: ['recruitment solutions Dubai', 'HR outsourcing Pakistan', 'payroll outsourcing UAE', 'HR advisory UAE'],
   },
   jobs: {
     title: 'Job Opportunities - Beecruit HR Agency',
@@ -21,8 +21,8 @@ export const pageMetadata = {
     keywords: ['jobs', 'career opportunities', 'job listings', 'employment', 'hiring'],
   },
   contact: {
-    title: 'Contact Us - Beecruit HR Agency',
-    description: 'Get in touch with our HR experts. We\'re here to help with your recruitment needs, job opportunities, or any questions about our services.',
-    keywords: ['contact', 'HR agency contact', 'recruitment contact', 'talent acquisition contact'],
+    title: 'Contact Beecruit | Book a Free HR Consultation',
+    description: 'Talk to our HR experts. Outsourced HR, recruitment, payroll & training for SMEs and enterprises in Pakistan & UAE.',
+    keywords: ['HR agency Pakistan', 'HR agency UAE', 'outsourced HR consultation'],
   }
 } 

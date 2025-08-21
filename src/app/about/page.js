@@ -67,8 +67,7 @@ export default function AboutPage() {
               About <span className="text-gradient">Beecruit</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're more than just an HR agency. We're your strategic partner in building 
-              exceptional teams and advancing careers.
+              We’re a human-centered HR agency delivering strategy-to-execution support—tailored to your culture, goals, and growth stage.
             </p>
           </motion.div>
         </div>
@@ -84,20 +83,12 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Our Mission
-              </h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Mission</h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                At Beecruit, we believe that the right people in the right roles can 
-                transform organizations and create extraordinary outcomes. Our mission is to 
-                bridge the gap between exceptional talent and ambitious employers, creating 
-                partnerships that drive success for both parties.
+                To empower businesses through smart, scalable, and human-centered HR solutions—built with integrity, driven by results, and delivered with care.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                We combine deep industry expertise with personalized service to deliver 
-                recruitment solutions that not only meet immediate hiring needs but also 
-                contribute to long-term organizational success.
-              </p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Vision</h3>
+              <p className="text-lg text-gray-600 leading-relaxed">To be the go-to HR partner for organizations that value people as their greatest asset.</p>
             </motion.div>
 
             <motion.div
@@ -107,30 +98,11 @@ export default function AboutPage() {
               transition={{ duration: 0.6 }}
               className="bg-primary-50 rounded-2xl p-8"
             >
-              <h3 className="text-2xl font-bold text-primary-900 mb-4">
-                What We Do
-              </h3>
+              <h3 className="text-2xl font-bold text-primary-900 mb-4">Who We Are</h3>
               <ul className="space-y-4 text-primary-800">
-                <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Executive search and leadership hiring</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Technical recruitment and IT staffing</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>HR consulting and process optimization</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Temporary and contract staffing solutions</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Career coaching and professional development</span>
-                </li>
+                <li className="flex items-start space-x-3"><div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div><span>Strategy-to-execution HR support for all growth stages</span></li>
+                <li className="flex items-start space-x-3"><div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div><span>People-first processes that improve outcomes</span></li>
+                <li className="flex items-start space-x-3"><div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div><span>Tailored to your culture and goals</span></li>
               </ul>
             </motion.div>
           </div>
@@ -147,13 +119,8 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Our <span className="text-gradient">Values</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              These core values guide everything we do and shape the relationships 
-              we build with our clients and candidates.
-            </p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Our <span className="text-gradient">Values</span></h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Integrity • Results-Driven • People-Focused — practical HR that respects your culture and improves outcomes.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

@@ -44,8 +44,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Empowering Companies.{' '}
-                <span className="text-gradient">Elevating Careers.</span>
+                Smart. Scalable. Human-Centered HR.
               </h1>
             </motion.div>
 
@@ -55,8 +54,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed"
             >
-              We bridge the gap between top talent and ambitious employers, 
-              providing comprehensive HR solutions for modern businesses.
+              End-to-end HR outsourcing, recruitment, payroll, and people operations for SMEs and enterprises in Pakistan & UAE—so you can focus on growth.
             </motion.p>
 
             <motion.div
@@ -66,19 +64,19 @@ export default function Hero() {
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
               <Link
-                href="/jobs"
+                href="/contact"
                 className="btn-primary inline-flex items-center justify-center group"
               >
-                View Openings
+                Book a Free HR Consultation
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
               </Link>
               
-              <Link
+              {/* <Link
                 href="/contact"
                 className="btn-secondary inline-flex items-center justify-center"
               >
-                Hire Talent
-              </Link>
+                Request a Proposal
+              </Link> */}
             </motion.div>
 
             {/* Stats */}
@@ -111,7 +109,7 @@ export default function Hero() {
             className="relative"
           >
             {/* Main Image */}
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            {/* <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                 alt="Professional team meeting"
@@ -120,7 +118,7 @@ export default function Hero() {
                 className="w-full h-auto"
               />
               
-              {/* Video Play Button Overlay */}
+         
               <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
                 <button
                   onClick={() => setIsVideoPlaying(true)}
@@ -130,10 +128,10 @@ export default function Hero() {
                   <Play className="w-6 h-6 text-primary-600 ml-1" />
                 </button>
               </div>
-            </div>
+            </div> */}
 
             {/* Floating Cards */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1 }}
@@ -165,7 +163,7 @@ export default function Hero() {
                   <div className="text-sm text-gray-600">Vetted candidates</div>
                 </div>
               </div>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </div>
       </div>

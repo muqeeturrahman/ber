@@ -9,19 +9,11 @@ import { motion, AnimatePresence } from 'framer-motion'
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
-  { 
-    name: 'Services', 
-    href: '/services',
-    dropdown: [
-      { name: 'Executive Search', href: '/services#executive-search' },
-      { name: 'Technical Recruitment', href: '/services#technical-recruitment' },
-      { name: 'HR Consulting', href: '/services#hr-consulting' },
-      { name: 'Temporary Staffing', href: '/services#temporary-staffing' }
-    ]
-  },
-  // { name: 'Employers', href: '/employers' },
-  // { name: 'Job Seekers', href: '/job-seekers' },
-  // { name: 'Jobs', href: '/jobs' },
+  { name: 'Services', href: '/services' },
+  { name: 'Industries', href: '/industries' },
+  { name: 'Packages', href: '/packages/pakistan' },
+  { name: 'Careers', href: '/careers' },
+  { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' }
 ]
 
@@ -127,12 +119,12 @@ return (
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Link 
+            {/* <Link 
               href="/jobs" 
               className="btn-outline hover:border-yellow-400 hover:text-yellow-600 transition-all duration-300"
             >
               View Jobs
-            </Link>
+            </Link> */}
             <Link 
               href="/contact" 
               className="btn-primary bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 border-0 shadow-md hover:shadow-lg transition-all duration-300"

@@ -151,7 +151,7 @@ export default function Footer() {
 
         {/* Newsletter Signup */}
         <div className="mt-12 pt-8 border-t border-gray-800">
-          <div className="max-w-md">
+          <div className="max-w-4xl">
             <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
             <p className="text-gray-300 mb-4">
               Get the latest job opportunities and HR insights delivered to your inbox.
@@ -169,6 +169,12 @@ export default function Footer() {
                 Subscribe
               </button>
             </form>
+
+            {/* Footer CTAs */}
+            <div className="mt-6 flex flex-col sm:flex-row gap-3">
+              <Link href="/contact" className="btn-primary">Request a Proposal</Link>
+              <Link href="/contact" className="btn-outline">Book a Free HR Consultation</Link>
+            </div>
           </div>
         </div>
       </div>
