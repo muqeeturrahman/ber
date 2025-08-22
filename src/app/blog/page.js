@@ -59,27 +59,27 @@ const articles = [
 
 export default function BlogPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-white dark:bg-black">
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-primary-50 to-accent-50">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-white to-yellow-50 dark:from-black dark:to-gray-900">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              HR Insights & <span className="text-primary-600">Resources</span>
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-yellow-400 mb-6">
+              HR Insights & <span className="text-primary-600 dark:text-yellow-400">Resources</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
               Actionable guides for founders and HR leaders navigating Pakistan, UAE, and global markets
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <div className="flex items-center gap-2 text-sm text-gray-600">
+              <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300">
                 <svg className="w-5 h-5 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
                 <span>Weekly insights from industry experts</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-gray-600">
+              <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300">
                 <svg className="w-5 h-5 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
@@ -91,22 +91,22 @@ export default function BlogPage() {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-16 bg-white border-b border-gray-200">
+      <section className="py-16 bg-white dark:bg-black border-b border-gray-200 dark:border-yellow-900/30">
         <div className="container-custom">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-yellow-400 mb-4">
               Get Weekly HR Insights
             </h2>
-            <p className="text-gray-600 mb-8">
+            <p className="text-gray-600 dark:text-gray-300 mb-8">
               Join 2,500+ HR leaders who receive actionable insights, templates, and industry updates.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input 
                 type="email" 
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                className="flex-1 px-4 py-3 border border-gray-300 dark:border-yellow-900/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent bg-white dark:bg-black text-gray-900 dark:text-gray-100"
               />
-              <button className="px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors">
+              <button className="px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg hover:bg-yellow-500 transition-colors">
                 Subscribe
               </button>
             </div>
@@ -116,28 +116,28 @@ export default function BlogPage() {
       </section>
 
       {/* Articles Section */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-white dark:bg-black">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-yellow-400 mb-4">
                 Latest Articles
               </h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-gray-600 dark:text-gray-300">
                 In-depth guides coming soon. Subscribe above to get notified when we publish.
               </p>
             </div>
 
             <div className="space-y-6">
               {articles.map((article, index) => (
-                <div key={index} className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
+                <div key={index} className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-yellow-900/30 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
                   <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
                     <div className="flex items-center gap-3 mb-2 md:mb-0">
                       <span className="px-3 py-1 bg-primary-100 text-primary-800 text-sm font-medium rounded-full">
                         {article.category}
                       </span>
-                      <span className="text-gray-500 text-sm">{article.readTime}</span>
-                      <span className="text-gray-500 text-sm">{article.publishDate}</span>
+                      <span className="text-gray-500 dark:text-gray-400 text-sm">{article.readTime}</span>
+                      <span className="text-gray-500 dark:text-gray-400 text-sm">{article.publishDate}</span>
                     </div>
                     {article.comingSoon && (
                       <span className="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm font-medium rounded-full w-fit">
@@ -146,11 +146,11 @@ export default function BlogPage() {
                     )}
                   </div>
                   
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3 leading-tight">
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-3 leading-tight">
                     {article.title}
                   </h3>
                   
-                  <p className="text-gray-600 text-lg leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
                     {article.excerpt}
                   </p>
                 </div>
@@ -158,15 +158,15 @@ export default function BlogPage() {
             </div>
 
             {/* Call to Action */}
-            <div className="text-center mt-16 p-8 bg-gradient-to-br from-primary-50 to-accent-50 rounded-2xl">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <div className="text-center mt-16 p-8 bg-gradient-to-br from-white to-yellow-50 dark:from-gray-900 dark:to-black rounded-2xl border border-gray-200 dark:border-yellow-900/30">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
                 Want to be the first to read our articles?
               </h3>
-              <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+              <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
                 We're working on comprehensive guides that will help you solve real HR challenges. 
                 Subscribe to our newsletter and get notified as soon as we publish new content.
               </p>
-              <button className="px-8 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors">
+              <button className="px-8 py-3 bg-yellow-400 text-black font-semibold rounded-lg hover:bg-yellow-500 transition-colors">
                 Join the Waitlist
               </button>
             </div>

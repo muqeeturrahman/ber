@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function CareersPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-white dark:bg-black">
       <Header />
 
       {/* Hero Section */}

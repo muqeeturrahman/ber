@@ -52,30 +52,30 @@ const industries = [
 
 export default function IndustriesPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-white dark:bg-black">
       <Header />
 
-      <section className="pt-32 pb-16 relative overflow-hidden bg-gradient-to-br from-primary-50 via-white to-accent-50">
+      <section className="pt-32 pb-16 relative overflow-hidden bg-gradient-to-br from-white via-white to-yellow-50 dark:from-black dark:via-gray-900 dark:to-black">
         <div className="absolute -top-16 -left-16 w-64 h-64 rounded-full bg-primary-200/40 blur-3xl"></div>
         <div className="absolute -bottom-16 -right-16 w-64 h-64 rounded-full bg-accent-200/40 blur-3xl"></div>
         <div className="container-custom text-center relative">
-          <span className="inline-block px-3 py-1 rounded-full text-sm bg-white/70 border border-gray-200 text-gray-700">Tailored by sector</span>
-          <h1 className="mt-4 text-4xl md:text-5xl font-bold text-gray-900">Industries We Serve</h1>
-          <p className="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">People-first HR systems for tech, retail, healthcare, finance, education, manufacturing, NGOs, and creative teams.</p>
+          <span className="inline-block px-3 py-1 rounded-full text-sm bg-white/70 dark:bg-white/10 border border-gray-200 dark:border-yellow-900/30 text-gray-700 dark:text-gray-300">Tailored by sector</span>
+          <h1 className="mt-4 text-4xl md:text-5xl font-bold text-gray-900 dark:text-yellow-400">Industries We Serve</h1>
+          <p className="mt-4 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">People-first HR systems for tech, retail, healthcare, finance, education, manufacturing, NGOs, and creative teams.</p>
         </div>
       </section>
 
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-white dark:bg-black">
         <div className="container-custom grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {industries.map((item) => (
-            <div key={item.title} className="group relative rounded-2xl border border-gray-100 bg-white p-6 shadow-sm hover:shadow-lg transition-shadow">
+            <div key={item.title} className="group relative rounded-2xl border border-gray-100 dark:border-yellow-900/30 bg-white dark:bg-gray-900 p-6 shadow-sm hover:shadow-lg transition-shadow">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center ring-1 ring-primary-100">
+                <div className="w-12 h-12 rounded-xl bg-primary-50 dark:bg-yellow-400/20 text-primary-600 dark:text-yellow-400 flex items-center justify-center ring-1 ring-primary-100 dark:ring-yellow-900/30">
                   <item.icon className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
-                  <p className="mt-2 text-gray-700 leading-relaxed">{item.description}</p>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">{item.title}</h3>
+                  <p className="mt-2 text-gray-700 dark:text-gray-300 leading-relaxed">{item.description}</p>
                 </div>
               </div>
               <div className="absolute inset-x-0 -bottom-2 mx-6 h-px bg-gradient-to-r from-transparent via-primary-200 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -84,9 +84,9 @@ export default function IndustriesPage() {
         </div>
       </section>
 
-      <section className="py-12 bg-gray-50">
+      <section className="py-12 bg-gray-50 dark:bg-black">
         <div className="container-custom text-center">
-          <p className="text-gray-700">Looking for a sector-specific HR solution in Karachi, Lahore, Islamabad, Dubai, or Abu Dhabi?</p>
+          <p className="text-gray-700 dark:text-gray-300">Looking for a sector-specific HR solution in Karachi, Lahore, Islamabad, Dubai, or Abu Dhabi?</p>
           <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/services" className="btn-outline">Explore Services</a>
             <a href="/contact" className="btn-primary">Request a Proposal</a>

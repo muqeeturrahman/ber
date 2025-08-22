@@ -15,14 +15,14 @@ export default function HomePage() {
   const featuredJobs = jobs.filter(job => job.featured).slice(0, 3)
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-white dark:bg-black">
       <Header />
       
       {/* Hero Section */}
       <Hero />
 
       {/* Short Intro */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-white dark:bg-black">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -31,10 +31,10 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-yellow-400 mb-4">
               About <span className="text-gradient">Beecruit</span>
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-600 dark:text-gray-300">
               Beecruit is a full-service HR agency with 9+ years of hands-on experience helping companies hire, manage, and grow their people. From executive hiring to payroll outsourcing and HR operations, we deliver custom HR solutions that scale with your business.
             </p>
           </motion.div>
@@ -42,7 +42,7 @@ export default function HomePage() {
       </section>
 
       {/* Fast Highlights */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-gray-50 dark:bg-black">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -69,7 +69,7 @@ export default function HomePage() {
       <ServicesGrid />
 
       {/* Why Choose Us Section */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-white dark:bg-black">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -78,10 +78,10 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-yellow-400 mb-6">
               Why Choose <span className="text-gradient">Beecruit</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               We combine industry expertise with personalized service to deliver 
               exceptional results for both employers and job seekers.
             </p>
@@ -95,11 +95,11 @@ export default function HomePage() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-center"
             >
-              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="w-8 h-8 text-primary-600" />
+              <div className="w-16 h-16 bg-primary-100 dark:bg-yellow-400/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Users className="w-8 h-8 text-primary-600 dark:text-yellow-400" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Expert Team</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4">Expert Team</h3>
+              <p className="text-gray-600 dark:text-gray-300">
                 Our experienced HR professionals have deep industry knowledge and 
                 proven track records in talent acquisition and placement.
               </p>
@@ -112,11 +112,11 @@ export default function HomePage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-center"
             >
-              <div className="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Building className="w-8 h-8 text-accent-600" />
+              <div className="w-16 h-16 bg-accent-100 dark:bg-yellow-400/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Building className="w-8 h-8 text-accent-600 dark:text-yellow-400" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Quality Focus</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4">Quality Focus</h3>
+              <p className="text-gray-600 dark:text-gray-300">
                 We prioritize quality over quantity, ensuring every placement 
                 is the right fit for both employer and candidate.
               </p>
@@ -129,11 +129,11 @@ export default function HomePage() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-center"
             >
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <TrendingUp className="w-8 h-8 text-purple-600" />
+              <div className="w-16 h-16 bg-purple-100 dark:bg-yellow-400/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <TrendingUp className="w-8 h-8 text-purple-600 dark:text-yellow-400" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Proven Results</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4">Proven Results</h3>
+              <p className="text-gray-600 dark:text-gray-300">
                 With 98% client satisfaction and thousands of successful placements, 
                 our track record speaks for itself.
               </p>
@@ -146,31 +146,31 @@ export default function HomePage() {
       <TestimonialSlider />
 
       {/* Featured Jobs Section */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
-          <motion.div
+      {/* <section className="section-padding bg-gray-50 dark:bg-black"> */}
+        {/* <div className="container-custom"> */}
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-yellow-400 mb-6">
               Featured <span className="text-gradient">Opportunities</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Discover exciting career opportunities with top companies. 
               These featured positions represent the best of what we have to offer.
             </p>
-          </motion.div>
+          </motion.div> */}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {featuredJobs.map((job) => (
               <JobCard key={job.id} job={job} />
             ))}
-          </div>
+          </div> */}
 
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -184,12 +184,12 @@ export default function HomePage() {
               <span>View All Jobs</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
             </Link>
-          </motion.div>
-        </div>
-      </section>
+          </motion.div> */}
+        {/* </div> */}
+      {/* </section> */}
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-primary text-white">
+      <section className="section-padding bg-gradient-primary text-white dark:bg-gradient-to-r dark:from-yellow-500 dark:to-yellow-700">
         <div className="container-custom text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

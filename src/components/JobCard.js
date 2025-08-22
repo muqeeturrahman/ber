@@ -16,14 +16,14 @@ export default function JobCard({ job }) {
       className="group"
     >
       <Link href={`/jobs/${job.slug}`}>
-        <div className="card p-6 h-full border border-gray-200 hover:border-primary-300 transition-all duration-300">
+        <div className="card p-6 h-full border border-gray-200 hover:border-primary-300 dark:border-yellow-900/30 dark:hover:border-yellow-700/50 transition-all duration-300">
           {/* Header */}
           <div className="flex items-start justify-between mb-4">
             <div className="flex-1">
-              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors duration-200">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2 group-hover:text-primary-600 dark:group-hover:text-yellow-400 transition-colors duration-200">
                 {job.title}
               </h3>
-              <p className="text-gray-600 font-medium">
+              <p className="text-gray-600 dark:text-gray-300 font-medium">
                 {job.company}
               </p>
             </div>
@@ -40,7 +40,7 @@ export default function JobCard({ job }) {
           {/* Job Details */}
           <div className="space-y-3 mb-4">
             {/* Location */}
-            <div className="flex items-center space-x-2 text-gray-600">
+            <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-300">
               <MapPin className="w-4 h-4" />
               <span className="text-sm">{job.location}</span>
             </div>
@@ -54,7 +54,7 @@ export default function JobCard({ job }) {
                 {job.experience} level
               </span>
               {job.remote && (
-                <span className="px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                <span className="px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300">
                   Remote
                 </span>
               )}
@@ -62,7 +62,7 @@ export default function JobCard({ job }) {
 
             {/* Salary */}
             {job.salary && (
-              <div className="flex items-center space-x-2 text-gray-600">
+              <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-300">
                 <DollarSign className="w-4 h-4" />
                 <span className="text-sm font-medium">
                   {formatSalary(job.salary.min, job.salary.max, job.salary.currency)}
@@ -72,7 +72,7 @@ export default function JobCard({ job }) {
           </div>
 
           {/* Description */}
-          <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+          <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-2">
             {job.description}
           </p>
 
@@ -98,12 +98,12 @@ export default function JobCard({ job }) {
 
           {/* Footer */}
           <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-            <div className="flex items-center space-x-2 text-gray-500">
+            <div className="flex items-center space-x-2 text-gray-500 dark:text-gray-400">
               <Clock className="w-4 h-4" />
               <span className="text-sm">{timeAgo(job.postedDate)}</span>
             </div>
             
-            <div className="flex items-center space-x-2 text-primary-600 font-medium text-sm group-hover:text-primary-700 transition-colors duration-200">
+            <div className="flex items-center space-x-2 text-primary-600 dark:text-yellow-400 font-medium text-sm group-hover:text-primary-700 dark:group-hover:text-yellow-300 transition-colors duration-200">
               <span>View Details</span>
               <Briefcase className="w-4 h-4" />
             </div>

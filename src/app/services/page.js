@@ -128,12 +128,12 @@ export default function ServicesPage() {
   ]
 
   return (
-    <main className="min-h-screen overflow-hidden">
+    <main className="min-h-screen overflow-hidden bg-white dark:bg-black">
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-primary-50 to-accent-50 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-600/5 to-accent-600/5"></div>
+      <section className="pt-32 pb-16 bg-gradient-to-br from-white to-yellow-50 dark:from-black dark:to-gray-900 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/5 to-amber-400/5"></div>
         <div className="container-custom relative">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -141,16 +141,16 @@ export default function ServicesPage() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-5xl mx-auto"
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-8 leading-tight">
-              Comprehensive <span className="bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">HR Solutions</span>
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-yellow-400 mb-8 leading-tight">
+              Comprehensive <span className="bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text text-transparent">HR Solutions</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-12 leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-12 leading-relaxed">
               From talent acquisition to complete HR outsourcing, we deliver tailored solutions that drive business growth across Pakistan, UAE, and global markets.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact" 
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-primary-600 to-accent-600 text-white font-semibold py-4 px-8 rounded-xl hover:shadow-xl transition-all duration-300 group"
+                className="inline-flex items-center gap-2 bg-yellow-400 text-black font-semibold py-4 px-8 rounded-xl hover:bg-yellow-500 transition-all duration-300 group"
               >
                 <span>Get Free Consultation</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
