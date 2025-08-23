@@ -255,32 +255,32 @@ export default function HomePage() {
       {/* </section> */}
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-r from-yellow-500 to-yellow-700 text-white">
-        <div className="container-custom text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-              Whether you're looking to hire top talent or find your next career opportunity, 
-              we're here to help you succeed.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="btn-secondary">
-                Hire Talent
-              </Link>
-              {/* <Link href="/jobs" className="bg-white text-primary-600 hover:bg-gray-50 font-medium py-3 px-6 rounded-lg transition-all duration-200">
-                Browse Jobs
-              </Link> */}
-            </div>
-          </motion.div>
-        </div>
-      </section>
+        <section className="section-padding bg-gradient-to-r from-yellow-500 to-yellow-700 text-white">
+          <div className="container-custom text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+                Whether you're looking to hire top talent or find your next career opportunity, 
+                we're here to help you succeed.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="btn-secondary">
+                  Hire Talent
+                </Link>
+                {/* <Link href="/jobs" className="bg-white text-primary-600 hover:bg-gray-50 font-medium py-3 px-6 rounded-lg transition-all duration-200">
+                  Browse Jobs
+                </Link> */}
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
       <Footer />
     </main>
