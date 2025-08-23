@@ -15,14 +15,14 @@ export default function HomePage() {
   const featuredJobs = jobs.filter(job => job.featured).slice(0, 3)
 
   return (
-    <main className="min-h-screen bg-white dark:bg-black">
+    <main className="min-h-screen bg-black">
       <Header />
       
       {/* Hero Section */}
       <Hero />
 
       {/* Short Intro */}
-      <section className="section-padding bg-white dark:bg-black">
+      <section className="section-padding bg-black">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -31,10 +31,10 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-yellow-400 mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-yellow-400 mb-4">
               About <span className="text-gradient">Beecruit</span>
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300">
+            <p className="text-lg text-gray-300">
               Beecruit is a full-service HR agency with 9+ years of hands-on experience helping companies hire, manage, and grow their people. From executive hiring to payroll outsourcing and HR operations, we deliver custom HR solutions that scale with your business.
             </p>
           </motion.div>
@@ -42,24 +42,90 @@ export default function HomePage() {
       </section>
 
       {/* Fast Highlights */}
-      <section className="section-padding bg-gray-50 dark:bg-black">
+      <section className="section-padding bg-black">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-yellow-400 mb-4">
+              Why Choose <span className="text-gradient">Beecruit</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We deliver comprehensive HR solutions that scale with your business growth
+            </p>
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
           >
             {[
-              'Outsourced HR partner for SMEs & enterprises',
-              'Recruitment at scale: exec, permanent, bulk & project hiring',
-              'Payroll & compliance handled end-to-end',
-              'People-first processes and training that boost performance'
-            ].map((item) => (
-              <div key={item} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 text-gray-800">
-                {item}
+              {
+                title: 'Full-Service HR Partner',
+                description: 'Outsourced HR partner for SMEs & enterprises',
+                icon: '🏢',
+                gradient: 'from-yellow-400 to-amber-500'
+              },
+              {
+                title: 'Scale Your Recruitment',
+                description: 'Recruitment at scale: exec, permanent, bulk & project hiring',
+                icon: '🚀',
+                gradient: 'from-yellow-500 to-orange-500'
+              },
+              {
+                title: 'Compliance & Payroll',
+                description: 'Payroll & compliance handled end-to-end',
+                icon: '📋',
+                gradient: 'from-amber-500 to-yellow-600'
+              },
+              {
+                title: 'Performance Focused',
+                description: 'People-first processes and training that boost performance',
+                icon: '📈',
+                gradient: 'from-yellow-600 to-amber-600'
+              }
+            ].map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 * index }}
+                className="group relative"
+              >
+                <div className="relative bg-gradient-to-br from-gray-900 to-black rounded-2xl p-8 shadow-xl border border-yellow-900/30 hover:border-yellow-400/50 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                  {/* Gradient overlay on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  
+                  {/* Icon */}
+                  <div className="relative z-10 mb-6">
+                    <div className={`w-16 h-16 bg-gradient-to-br ${item.gradient} rounded-xl flex items-center justify-center text-2xl shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                      {item.icon}
+                    </div>
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="relative z-10">
+                    <h3 className="text-xl font-bold text-yellow-400 mb-3 group-hover:text-yellow-300 transition-colors duration-300">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                  
+                  {/* Decorative elements */}
+                  <div className="absolute top-4 right-4 w-2 h-2 bg-yellow-400/30 rounded-full group-hover:bg-yellow-400 transition-colors duration-300"></div>
+                  <div className="absolute bottom-4 left-4 w-1 h-1 bg-yellow-400/20 rounded-full group-hover:bg-yellow-400/40 transition-colors duration-300"></div>
               </div>
+              </motion.div>
             ))}
           </motion.div>
         </div>
@@ -69,7 +135,7 @@ export default function HomePage() {
       <ServicesGrid />
 
       {/* Why Choose Us Section */}
-      <section className="section-padding bg-white dark:bg-black">
+      <section className="section-padding bg-black">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -78,10 +144,10 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-yellow-400 mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-yellow-400 mb-6">
               Why Choose <span className="text-gradient">Beecruit</span>
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We combine industry expertise with personalized service to deliver 
               exceptional results for both employers and job seekers.
             </p>
@@ -95,11 +161,11 @@ export default function HomePage() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-center"
             >
-              <div className="w-16 h-16 bg-primary-100 dark:bg-yellow-400/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="w-8 h-8 text-primary-600 dark:text-yellow-400" />
+              <div className="w-16 h-16 bg-yellow-400/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Users className="w-8 h-8 text-yellow-400" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4">Expert Team</h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <h3 className="text-xl font-bold text-gray-100 mb-4">Expert Team</h3>
+              <p className="text-gray-300">
                 Our experienced HR professionals have deep industry knowledge and 
                 proven track records in talent acquisition and placement.
               </p>
@@ -112,11 +178,11 @@ export default function HomePage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-center"
             >
-              <div className="w-16 h-16 bg-accent-100 dark:bg-yellow-400/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Building className="w-8 h-8 text-accent-600 dark:text-yellow-400" />
+              <div className="w-16 h-16 bg-yellow-400/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Building className="w-8 h-8 text-yellow-400" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4">Quality Focus</h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <h3 className="text-xl font-bold text-gray-100 mb-4">Quality Focus</h3>
+              <p className="text-gray-300">
                 We prioritize quality over quantity, ensuring every placement 
                 is the right fit for both employer and candidate.
               </p>
@@ -129,11 +195,11 @@ export default function HomePage() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-center"
             >
-              <div className="w-16 h-16 bg-purple-100 dark:bg-yellow-400/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <TrendingUp className="w-8 h-8 text-purple-600 dark:text-yellow-400" />
+              <div className="w-16 h-16 bg-yellow-400/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <TrendingUp className="w-8 h-8 text-yellow-400" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4">Proven Results</h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <h3 className="text-xl font-bold text-gray-100 mb-4">Proven Results</h3>
+              <p className="text-gray-300">
                 With 98% client satisfaction and thousands of successful placements, 
                 our track record speaks for itself.
               </p>
@@ -189,7 +255,7 @@ export default function HomePage() {
       {/* </section> */}
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-primary text-white dark:bg-gradient-to-r dark:from-yellow-500 dark:to-yellow-700">
+      <section className="section-padding bg-gradient-to-r from-yellow-500 to-yellow-700 text-white">
         <div className="container-custom text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

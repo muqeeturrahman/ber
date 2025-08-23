@@ -86,8 +86,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
-      <body className={`${inter.className} antialiased bg-white text-gray-900 dark:bg-black dark:text-gray-100`}>
+    <html lang="en" className={`${inter.variable} ${poppins.variable} dark`}>
+      <body className={`${inter.className} antialiased bg-black text-gray-100`}>
         {children}
       </body>
     </html>

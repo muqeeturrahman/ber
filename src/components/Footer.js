@@ -52,15 +52,15 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white">
+    <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="container-custom py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">TB</span>
+              <div className="w-8 h-8 bg-yellow-400 rounded-lg flex items-center justify-center">
+                <span className="text-black font-bold">TB</span>
               </div>
               <span className="text-xl font-bold">{companyInfo.name}</span>
             </div>
@@ -71,7 +71,7 @@ export default function Footer() {
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-primary-400" />
+                <Mail className="w-5 h-5 text-yellow-400" />
                 <a 
                   href={`mailto:${companyInfo.contact.email}`}
                   className="text-gray-300 hover:text-white transition-colors duration-200"
@@ -80,7 +80,7 @@ export default function Footer() {
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-primary-400" />
+                <Phone className="w-5 h-5 text-yellow-400" />
                 <a 
                   href={`tel:${companyInfo.contact.phone}`}
                   className="text-gray-300 hover:text-white transition-colors duration-200"
@@ -89,7 +89,7 @@ export default function Footer() {
                 </a>
               </div>
               <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-primary-400 mt-0.5" />
+                <MapPin className="w-5 h-5 text-yellow-400 mt-0.5" />
                 <span className="text-gray-300">
                   {companyInfo.contact.address}
                 </span>
@@ -150,7 +150,7 @@ export default function Footer() {
         </div>
 
         {/* Newsletter Signup */}
-        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
+        <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="max-w-4xl">
             <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
             <p className="text-gray-300 mb-4">
@@ -160,7 +160,7 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-gray-900 dark:text-white placeholder-gray-400"
+                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-white placeholder-gray-400"
               />
               <button
                 type="submit"
@@ -180,7 +180,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Footer */}
-      <div className="border-t border-gray-200 dark:border-gray-800">
+      <div className="border-t border-gray-800">
         <div className="container-custom py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Copyright */}
@@ -208,13 +208,13 @@ export default function Footer() {
             <div className="flex items-center space-x-6 text-sm">
               <Link
                 href="/privacy"
-                className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
+                className="text-gray-400 hover:text-white transition-colors duration-200"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="/terms"
-                className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
+                className="text-gray-400 hover:text-white transition-colors duration-200"
               >
                 Terms of Service
               </Link>

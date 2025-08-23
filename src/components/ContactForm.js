@@ -52,7 +52,7 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="section-padding bg-gray-50">
+    <section className="section-padding bg-black">
       <div className="container-custom">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
@@ -63,10 +63,10 @@ export default function ContactForm() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-yellow-400 mb-6">
               Get in <span className="text-gradient">Touch</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Ready to find your next great hire or explore new opportunities? 
               Let's start a conversation about how we can help.
             </p>
@@ -80,20 +80,20 @@ export default function ContactForm() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              <h3 className="text-2xl font-bold text-gray-100 mb-6">
                 Let's Discuss Your Needs
               </h3>
               
               <div className="space-y-6">
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                  <h4 className="text-lg font-semibold text-gray-100 mb-2">
                     For Employers
                   </h4>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-gray-300 mb-4">
                     Looking to hire top talent? Our recruitment experts can help you find 
                     the perfect candidates for your organization.
                   </p>
-                  <ul className="space-y-2 text-gray-600">
+                  <ul className="space-y-2 text-gray-300">
                     <li>• Executive search and leadership hiring</li>
                     <li>• Technical recruitment and IT staffing</li>
                     <li>• HR consulting and process optimization</li>
@@ -102,14 +102,14 @@ export default function ContactForm() {
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                  <h4 className="text-lg font-semibold text-gray-100 mb-2">
                     For Job Seekers
                   </h4>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-gray-300 mb-4">
                     Ready for your next career move? We have access to exclusive 
                     opportunities with top companies.
                   </p>
-                  <ul className="space-y-2 text-gray-600">
+                  <ul className="space-y-2 text-gray-300">
                     <li>• Exclusive job opportunities</li>
                     <li>• Career coaching and guidance</li>
                     <li>• Resume optimization services</li>
@@ -117,11 +117,11 @@ export default function ContactForm() {
                   </ul>
                 </div>
 
-                <div className="bg-primary-50 rounded-lg p-6">
-                  <h4 className="text-lg font-semibold text-primary-900 mb-2">
+                <div className="bg-yellow-400/10 rounded-lg p-6 border border-yellow-400/20">
+                  <h4 className="text-lg font-semibold text-yellow-400 mb-2">
                     Quick Response
                   </h4>
-                  <p className="text-primary-700">
+                  <p className="text-gray-300">
                     We typically respond to all inquiries within 24 hours during business days.
                   </p>
                 </div>
@@ -139,7 +139,7 @@ export default function ContactForm() {
                 {/* Name and Email */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                       Full Name *
                     </label>
                     <input
@@ -155,7 +155,7 @@ export default function ContactForm() {
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                       Email Address *
                     </label>
                     <input
@@ -174,7 +174,7 @@ export default function ContactForm() {
                 {/* Company and Phone */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
                       Company
                     </label>
                     <input
@@ -187,7 +187,7 @@ export default function ContactForm() {
                   </div>
 
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
                       Phone Number
                     </label>
                     <input
@@ -203,7 +203,7 @@ export default function ContactForm() {
                 {/* Service and Budget */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                       Service Interest
                     </label>
                     <select
@@ -222,7 +222,7 @@ export default function ContactForm() {
                   </div>
 
                   <div>
-                    <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="budget" className="block text-sm font-medium text-gray-300 mb-2">
                       Budget Range
                     </label>
                     <select
@@ -243,7 +243,7 @@ export default function ContactForm() {
 
                 {/* Timeline */}
                 <div>
-                  <label htmlFor="timeline" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="timeline" className="block text-sm font-medium text-gray-300 mb-2">
                     Timeline
                   </label>
                   <select
@@ -262,7 +262,7 @@ export default function ContactForm() {
 
                 {/* Message */}
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                     Message *
                   </label>
                   <textarea

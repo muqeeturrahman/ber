@@ -51,7 +51,7 @@ export default function TestimonialSlider() {
   }
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-black">
       <div className="container-custom">
         {/* Section Header */}
         <motion.div
@@ -61,10 +61,10 @@ export default function TestimonialSlider() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-yellow-400 mb-6">
             What Our <span className="text-gradient">Clients Say</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Don't just take our word for it. Here's what our clients have to say 
             about their experience working with us.
           </p>
@@ -75,18 +75,18 @@ export default function TestimonialSlider() {
           {/* Navigation Buttons */}
           <button
             onClick={() => paginate(-1)}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-200"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-gray-900 rounded-full shadow-lg flex items-center justify-center hover:bg-gray-800 transition-colors duration-200"
             aria-label="Previous testimonial"
           >
-            <ChevronLeft className="w-6 h-6 text-gray-600" />
+            <ChevronLeft className="w-6 h-6 text-gray-300" />
           </button>
 
           <button
             onClick={() => paginate(1)}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-200"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-gray-900 rounded-full shadow-lg flex items-center justify-center hover:bg-gray-800 transition-colors duration-200"
             aria-label="Next testimonial"
           >
-            <ChevronRight className="w-6 h-6 text-gray-600" />
+            <ChevronRight className="w-6 h-6 text-gray-300" />
           </button>
 
           {/* Testimonial Content */}
@@ -117,16 +117,16 @@ export default function TestimonialSlider() {
                 }}
                 className="absolute inset-0"
               >
-                <div className="bg-white rounded-2xl p-8 md:p-12 shadow-xl border border-gray-100 h-full flex flex-col justify-center">
+                <div className="bg-gray-900 rounded-2xl p-8 md:p-12 shadow-xl border border-yellow-900/30 h-full flex flex-col justify-center">
                   {/* Quote Icon */}
                   <div className="flex justify-center mb-6">
-                    <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center">
-                      <Quote className="w-8 h-8 text-primary-600" />
+                    <div className="w-16 h-16 bg-yellow-400/20 rounded-full flex items-center justify-center">
+                      <Quote className="w-8 h-8 text-yellow-400" />
                     </div>
                   </div>
 
                   {/* Testimonial Text */}
-                  <blockquote className="text-lg md:text-xl text-gray-700 text-center mb-8 leading-relaxed">
+                  <blockquote className="text-lg md:text-xl text-gray-300 text-center mb-8 leading-relaxed">
                     "{testimonials[currentIndex].content}"
                   </blockquote>
 
@@ -137,10 +137,10 @@ export default function TestimonialSlider() {
                         <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                       ))}
                     </div>
-                    <div className="font-semibold text-gray-900">
+                    <div className="font-semibold text-gray-100">
                       {testimonials[currentIndex].name}
                     </div>
-                    <div className="text-gray-600">
+                    <div className="text-gray-400">
                       {testimonials[currentIndex].role} at {testimonials[currentIndex].company}
                     </div>
                   </div>
@@ -157,8 +157,8 @@ export default function TestimonialSlider() {
                 onClick={() => goToSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-200 ${
                   index === currentIndex 
-                    ? 'bg-primary-600 w-8' 
-                    : 'bg-gray-300 hover:bg-gray-400'
+                    ? 'bg-yellow-400 w-8' 
+                    : 'bg-gray-600 hover:bg-gray-500'
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />
@@ -175,25 +175,25 @@ export default function TestimonialSlider() {
           className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8"
         >
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-primary-600 mb-2">
+            <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">
               98%
             </div>
-            <div className="text-gray-600">Client Satisfaction Rate</div>
+            <div className="text-gray-400">Client Satisfaction Rate</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-primary-600 mb-2">
+            <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">
               500+
             </div>
-            <div className="text-gray-600">Successful Placements</div>
+            <div className="text-gray-400">Successful Placements</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-primary-600 mb-2">
+            <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">
               50+
             </div>
-            <div className="text-gray-600">Partner Companies</div>
+            <div className="text-gray-400">Partner Companies</div>
           </div>
         </motion.div>
       </div>
     </section>
   )
-} 
+}   
