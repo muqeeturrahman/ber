@@ -29,49 +29,49 @@ export default function CareersPage() {
   ]
 
   const processSteps = [
-    {
-      step: "01",
-      title: "Submit Your CV",
+              {
+                step: "01",
+                title: "Submit Your CV",
       description: "Upload your resume and tell us about your career goals and preferences.",
       icon: "📄"
-    },
-    {
-      step: "02", 
-      title: "Profile Review",
+              },
+              {
+                step: "02", 
+                title: "Profile Review",
       description: "Our experts review your profile and identify the best matching opportunities.",
       icon: "🔍"
-    },
-    {
-      step: "03",
-      title: "Interview Process",
+              },
+              {
+                step: "03",
+                title: "Interview Process",
       description: "We coordinate interviews and provide preparation support to maximize your success.",
       icon: "🤝"
-    },
-    {
-      step: "04",
-      title: "Placement & Support",
+              },
+              {
+                step: "04",
+                title: "Placement & Support",
       description: "We facilitate the placement and provide ongoing support during your transition.",
       icon: "🎯"
     }
   ]
 
   const faqs = [
-    {
-      question: "How long does the placement process typically take?",
-      answer: "The timeline varies depending on your field and seniority level. For most positions, we aim to present suitable opportunities within 2-4 weeks of receiving your CV. Senior executive roles may take longer due to their specialized nature."
-    },
-    {
-      question: "Do I need to pay any fees as a candidate?",
-      answer: "No, our services are completely free for job seekers. We are compensated by our client companies when we successfully place candidates."
-    },
-    {
-      question: "Will my current employer know I'm looking for new opportunities?",
-      answer: "Absolutely not. We maintain strict confidentiality throughout the process. Your current employer will only be contacted if you explicitly give us permission to do so."
-    },
-    {
-      question: "What types of positions do you typically fill?",
-      answer: "We work across all experience levels, from fresh graduates to C-suite executives. Our focus areas include technology, finance, healthcare, engineering, marketing, and operations roles."
-    }
+              {
+                question: "How long does the placement process typically take?",
+                answer: "The timeline varies depending on your field and seniority level. For most positions, we aim to present suitable opportunities within 2-4 weeks of receiving your CV. Senior executive roles may take longer due to their specialized nature."
+              },
+              {
+                question: "Do I need to pay any fees as a candidate?",
+                answer: "No, our services are completely free for job seekers. We are compensated by our client companies when we successfully place candidates."
+              },
+              {
+                question: "Will my current employer know I'm looking for new opportunities?",
+                answer: "Absolutely not. We maintain strict confidentiality throughout the process. Your current employer will only be contacted if you explicitly give us permission to do so."
+              },
+              {
+                question: "What types of positions do you typically fill?",
+                answer: "We work across all experience levels, from fresh graduates to C-suite executives. Our focus areas include technology, finance, healthcare, engineering, marketing, and operations roles."
+              }
   ]
 
   return (
@@ -294,9 +294,9 @@ export default function CareersPage() {
                   <summary className="font-semibold text-yellow-400 cursor-pointer hover:text-yellow-300 transition-colors flex items-center justify-between">
                     <span>{faq.question}</span>
                     <ArrowRight className="w-5 h-5 transform group-open:rotate-90 transition-transform duration-300" />
-                  </summary>
+                </summary>
                   <p className="mt-4 text-gray-300 leading-relaxed">{faq.answer}</p>
-                </details>
+              </details>
               </motion.div>
             ))}
           </div>

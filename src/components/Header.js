@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X, ChevronDown } from 'lucide-react'
-
 import { motion, AnimatePresence } from 'framer-motion'
 
 const navigation = [
@@ -32,103 +31,87 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen)
-  }
-
+  const toggleMenu = () => setIsOpen(!isOpen)
   const closeMenu = () => {
     setIsOpen(false)
     setActiveDropdown(null)
   }
 
-  // return (
-//  <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-//   isScrolled 
-//     ? 'bg-yellow-400 shadow-lg' 
-//     : 'bg-yellow-400'
-// }`}>
   return (
-  <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-    isScrolled 
-      ? 'bg-black/95 backdrop-blur-md shadow-lg' 
-      : 'bg-black'
-  }`}>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 shadow-lg`}
+      style={{ backgroundColor: '#FEC714' }} // ✅ Exact logo yellow
+    >
       <div className="container-custom">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center group">
-            <div className="relative h-12 lg:h-16 w-auto">
-              <Image
-                src="/logo-removebg-preview.png"
-                alt="Beecruit - HR Solutions That Speak Volumes"
-                width={200}
-                height={64}
-                className="h-full w-auto object-contain group-hover:scale-105 transition-transform duration-300 brightness-0 invert"
-                priority
-              />
-            </div>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
-            {navigation.map((item) => (
-              <div key={item.name} className="relative">
-                {item.dropdown ? (
-                  <div
-                    className="flex items-center space-x-1 cursor-pointer group"
-                    onMouseEnter={() => setActiveDropdown(item.name)}
-                    onMouseLeave={() => setActiveDropdown(null)}
-                  >
-                    <span className="text-gray-300 hover:text-yellow-400 transition-colors duration-200 font-medium">
-                      {item.name}
-                    </span>
-                    <ChevronDown className="w-4 h-4 text-gray-500 group-hover:text-yellow-400 transition-all duration-200 group-hover:rotate-180" />
-                    
-                    {/* Dropdown Menu */}
-                    <AnimatePresence>
-                      {activeDropdown === item.name && (
-                        <motion.div
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: 10 }}
-                          className="absolute top-full left-0 mt-2 w-64 bg-black rounded-xl shadow-xl border border-yellow-900/30 py-2 overflow-hidden"
-                        >
-                          {item.dropdown.map((dropdownItem) => (
-                            <Link
-                              key={dropdownItem.name}
-                              href={dropdownItem.href}
-                              className="block px-4 py-3 text-gray-300 hover:bg-yellow-400/10 hover:text-yellow-300 transition-all duration-200 font-medium"
-                            >
-                              {dropdownItem.name}
-                            </Link>
-                          ))}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                ) : (
-                  <Link
-                    href={item.href}
-                    className="text-gray-300 hover:text-yellow-400 transition-colors duration-200 font-medium"
-                  >
-                    {item.name}
-                  </Link>
-                )}
+        <div className="flex items-center h-16 lg:h-20">
+          {/* Left: Logo + Nav */}
+          <div className="flex items-center">
+            <Link href="/" className="flex items-center group">
+              <div className="relative h-12 lg:h-16 w-auto flex-shrink-0">
+                <Image
+                  src="/3.jpeg"
+                  alt="Beecruit - HR Solutions That Speak Volumes"
+                  width={48}
+                  height={48}
+                  className="h-full w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                  priority
+                />
               </div>
-            ))}
-          </nav>
+            </Link>
+            <nav className="hidden lg:flex items-center space-x-8 ml-4">
+              {navigation.map((item) => (
+                <div key={item.name} className="relative">
+                  {item.dropdown ? (
+                    <div
+                      className="flex items-center space-x-1 cursor-pointer group"
+                      onMouseEnter={() => setActiveDropdown(item.name)}
+                      onMouseLeave={() => setActiveDropdown(null)}
+                    >
+                      <span className="text-black hover:text-gray-700 transition-colors duration-200 font-medium">
+                        {item.name}
+                      </span>
+                      <ChevronDown className="w-4 h-4 text-black group-hover:text-gray-700 transition-all duration-200 group-hover:rotate-180" />
 
-          {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center space-x-4">
-            {/* <Link 
-              href="/jobs" 
-              className="btn-outline hover:border-yellow-400 hover:text-yellow-600 transition-all duration-300"
-            >
-              View Jobs
-            </Link> */}
-            <Link 
-              href="/contact" 
-              className="btn-primary bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 border-0 shadow-md hover:shadow-lg transition-all duration-300"
+                      {/* Dropdown Menu */}
+                      <AnimatePresence>
+                        {activeDropdown === item.name && (
+                          <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 10 }}
+                            className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-200 py-2 overflow-hidden"
+                          >
+                            {item.dropdown.map((dropdownItem) => (
+                              <Link
+                                key={dropdownItem.name}
+                                href={dropdownItem.href}
+                                className="block px-4 py-3 text-black hover:bg-gray-100 hover:text-gray-900 transition-all duration-200 font-medium"
+                              >
+                                {dropdownItem.name}
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="text-black hover:text-gray-700 transition-colors duration-200 font-medium"
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
+              ))}
+            </nav>
+          </div>
+          {/* Right: CTA Button */}
+          <div className="hidden lg:flex items-center ml-auto">
+            <Link
+              href="/contact"
+              className="font-semibold bg-black text-white px-6 py-3 rounded-xl shadow-md hover:bg-gray-900 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 h-12 flex items-center justify-center text-lg"
+              style={{ minWidth: '140px' }}
             >
               Hire Talent
             </Link>
@@ -137,13 +120,13 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="lg:hidden p-2 rounded-lg hover:bg-gray-800 transition-colors duration-200"
+            className="lg:hidden p-2 rounded-lg hover:bg-black/10 transition-colors duration-200"
             aria-label="Toggle menu"
           >
             {isOpen ? (
-              <X className="w-6 h-6 text-gray-300" />
+              <X className="w-6 h-6 text-black" />
             ) : (
-              <Menu className="w-6 h-6 text-gray-300" />
+              <Menu className="w-6 h-6 text-black" />
             )}
           </button>
         </div>
@@ -156,7 +139,7 @@ export default function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-black border-t border-yellow-900/30"
+            className="lg:hidden bg-white border-t border-gray-200"
           >
             <div className="container-custom py-4">
               <nav className="space-y-2">
@@ -165,13 +148,17 @@ export default function Header() {
                     {item.dropdown ? (
                       <div>
                         <button
-                          onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
-                          className="flex items-center justify-between w-full px-4 py-3 text-left text-gray-300 hover:bg-yellow-400/10 rounded-lg font-medium"
+                          onClick={() =>
+                            setActiveDropdown(activeDropdown === item.name ? null : item.name)
+                          }
+                          className="flex items-center justify-between w-full px-4 py-3 text-left text-black hover:bg-gray-100 rounded-lg font-medium"
                         >
                           <span>{item.name}</span>
-                          <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                            activeDropdown === item.name ? 'rotate-180' : ''
-                          }`} />
+                          <ChevronDown
+                            className={`w-4 h-4 transition-transform duration-200 ${
+                              activeDropdown === item.name ? 'rotate-180' : ''
+                            }`}
+                          />
                         </button>
                         <AnimatePresence>
                           {activeDropdown === item.name && (
@@ -186,7 +173,7 @@ export default function Header() {
                                   key={dropdownItem.name}
                                   href={dropdownItem.href}
                                   onClick={closeMenu}
-                                  className="block px-4 py-2 text-gray-400 hover:bg-yellow-400/10 hover:text-yellow-300 rounded-lg transition-all duration-200"
+                                  className="block px-4 py-2 text-black hover:bg-gray-100 rounded-lg transition-all duration-200"
                                 >
                                   {dropdownItem.name}
                                 </Link>
@@ -199,7 +186,7 @@ export default function Header() {
                       <Link
                         href={item.href}
                         onClick={closeMenu}
-                        className="block px-4 py-3 text-gray-300 hover:bg-yellow-400/10 rounded-lg font-medium"
+                        className="block px-4 py-3 text-black hover:bg-gray-100 rounded-lg font-medium"
                       >
                         {item.name}
                       </Link>
@@ -207,20 +194,13 @@ export default function Header() {
                   </div>
                 ))}
               </nav>
-              
+
               {/* Mobile CTA Buttons */}
               <div className="mt-6 space-y-3">
                 <Link
-                  href="/jobs"
-                  onClick={closeMenu}
-                  className="block w-full text-center btn-outline hover:border-yellow-400 hover:text-yellow-600"
-                >
-                  View Jobs
-                </Link>
-                <Link
                   href="/contact"
                   onClick={closeMenu}
-                  className="block w-full text-center btn-primary bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 border-0"
+                  className="block w-full text-center bg-black text-white hover:bg-gray-900 px-4 py-2 rounded-lg transition-all duration-200"
                 >
                   Hire Talent
                 </Link>
